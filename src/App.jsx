@@ -17,11 +17,12 @@ const ICONS = {
 }
 const Icon = ({ name, className = 'w-5 h-5' }) => <span className={className}>{ICONS[name]}</span>
 
+const BASE = import.meta.env.BASE_URL
 const INITIAL_ITEMS = [
-  { id: 1, name: 'HP Pavilion Laptop', vendor: 'TechWorld', price: 450000, qty: 1, image: '/images/hpl.jpg' },
-  { id: 2, name: 'Nike Air Force 1', vendor: 'Nike Official', price: 65000, qty: 1, image: '/images/naf.jpg' },
-  { id: 3, name: 'JBL Headphones', vendor: 'SoundHub', price: 45000, qty: 1, image: '/images/jbl.jpg' },
-  { id: 4, name: 'Smart Watch', vendor: 'TechWorld', price: 70000, qty: 1, image: '/images/sw.jpg' },
+  { id: 1, name: 'HP Pavilion Laptop', vendor: 'TechWorld', price: 450000, qty: 1, image: `${BASE}images/hpl.jpg` },
+  { id: 2, name: 'Nike Air Force 1', vendor: 'Nike Official', price: 65000, qty: 1, image: `${BASE}images/naf.jpg` },
+  { id: 3, name: 'JBL Headphones', vendor: 'SoundHub', price: 45000, qty: 1, image: `${BASE}images/jbl.jpg` },
+  { id: 4, name: 'Smart Watch', vendor: 'TechWorld', price: 70000, qty: 1, image: `${BASE}images/sw.jpg` },
 ]
 const fmt = (n) => `₦${n.toLocaleString()}`
 const DELIVERY_FEE = 5000
